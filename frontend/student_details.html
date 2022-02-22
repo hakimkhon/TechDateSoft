@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Mijozlar</h1>
+    <a href="/leads">Asosiy saxifa</a>
+    <h3>
+        ismi: {{lead.ism}}
+    </h3>
+    <h3>
+        familiasi: {{ lead.famila }}
+    </h3>
+    <h3>
+        yoshi: {{ lead.yosh }}
+    </h3>
+    <h3>
+        Ustozi: {{ lead.teacher }}
+    </h3>
+    <a href="{% url 'leads:student_update' lead.pk %}">O'zgartirish</a>
+    <a href="{% url 'leads:student_delete' lead.pk %}">O'chirish</a>
+    
+</body>
+</html>
