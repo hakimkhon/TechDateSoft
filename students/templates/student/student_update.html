@@ -1,0 +1,12 @@
+
+{% extends 'main.html' %}
+{% block title %}O'zgartirish{% endblock %}
+{% block content%}
+    <h1>Malumotlarni o'zgartirish</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit">Saqlash</button>
+    </form>
+    <h2><a href="/leads">Asosiy saxifa</a></h2>
+{% endblock %}

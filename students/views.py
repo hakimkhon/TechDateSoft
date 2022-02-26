@@ -1,23 +1,29 @@
+from re import template
 from django.shortcuts import render, redirect
+from django.shortcuts import get_object_or_404
+# from django.views.generic import TemplateView
 from . import models
 from .forms import *
-from django.shortcuts import get_object_or_404
 
-import students
+# class HomeView(TemplateView):
+#     template_name = ("home.html")
+
+def home(request):
+    return render(request, "home.html")
 
 def student_lists(request):
     talaba = models.Student.objects.all
     context = {
         "leads": talaba
     }
-    return render(request, "student_lists.html", context)
+    return render(request, "student/student_lists.html", context)
 
 def student_details(request, pk):
     pktalaba = get_object_or_404(models.Student, id = pk)
     context = {
         "lead": pktalaba
     }
-    return render(request, "student_details.html", context)
+    return render(request, "student/student_details.html", context)
 
 def student_create(request):
     form = StudentModelForm()
@@ -29,7 +35,7 @@ def student_create(request):
     context = {
         "forms": form
     }
-    return render(request, "student_create.html", context)
+    return render(request, "student/student_create.html", context)
 
 def student_update(request, pk):
     talaba = models.Student.objects.get(id = pk)
@@ -43,7 +49,7 @@ def student_update(request, pk):
         "form": form,
         "lead": talaba
     }
-    return render(request, "student_update.html", context)
+    return render(request, "student/student_update.html", context)
 
 def student_delete(request, pk):
     talaba = models.Student.objects.get(id = pk)
