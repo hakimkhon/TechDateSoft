@@ -65,10 +65,10 @@ WSGI_APPLICATION = 'markaz.wsgi.application'
 
 DATABASES = {
     'default': {
-        # 'ENGINE': 'django.db.backends.sqlite3',
-        # 'NAME': BASE_DIR / 'db.sqlite3',
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'd6d475u9ujqmd',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+        # 'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        # 'NAME': 'd6d475u9ujqmd',
         'USER': 'clcirshdokhxtk',
         'PASSWORD': '7a9ef18b01f523f9e8cb26adb3fd694b0e01a3da475583f78a7fb8db544e6e8a',
         'HOST': 'ec2-44-199-83-229.compute-1.amazonaws.com',
