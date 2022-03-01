@@ -1,12 +1,13 @@
 
 {% extends 'main.html' %}
-{% block title %}Yaratish{% endblock %}
+{% block title %}O'chirish{% endblock %}
 {% block content %}
 
+    <h1>Haqiqatdan ham o'chirmoqchimisiz</h1>
     <form action="" method="post">
         {% csrf_token %}
         {{form.as_p}}
-        <button type="submit">Jo'natish</button>
+        <button type="submit">O'chirish</button>
     </form>
 
 {% endblock %}
